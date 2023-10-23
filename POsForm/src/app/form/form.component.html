@@ -1,0 +1,31 @@
+<div class="form">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="searchInput" placeholder="Enter a PONumber">
+      <button type="submit">Search</button>
+    </form>
+</div>
+  
+<div>
+  
+  <table *ngIf="empty_array" id="myTable">
+    <tr>
+      <th>Barcode</th>
+      <th>Name</th>
+      <th>RatePerUnit</th>
+      <th>QuantityRequired</th>
+      <th>FreeItemsQuantity</th>
+      <th>TotalQuantity</th>
+    </tr>
+    <tr *ngFor="let item of POs_Items">
+      <td>{{ item.Barcode }}</td>
+      <td>{{ item.Name }}</td>
+      <td>{{ item.RatePerUnit }}</td>
+      <td>{{ item.QuantityRequired }}</td>
+      <td>{{ item.FreeItemsQuantity }}</td>
+      <td>{{ item.TotalQuantity }}</td>
+    </tr>
+  </table>
+</div>
+<div class="button-container">
+  <button *ngIf="empty_array"  class="export-button" (click)="exportToExcel()">Export Table</button>
+</div>

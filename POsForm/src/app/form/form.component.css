@@ -1,0 +1,75 @@
+/* form.component.css */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-top: 20px;
+  margin-bottom:  auto;
+  margin-left:  auto;
+  margin-right:  auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+table {
+  border:2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+th, td {
+  border:2px solid black;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 20px;
+}
+
+.export-button{
+  align-items: center;
+  background-color: #466ae1;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-width: 100px;
+  margin-top: 30px;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.export-button:hover{
+  background-color: #042344;
+}

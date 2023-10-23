@@ -1,0 +1,69 @@
+/* header.component.css */
+
+.app-header {
+  background-color: #3498db;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-name {
+  font-size: 24px;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.stock {
+  background-color: #e74c3c;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin to create space between the buttons */
+}
+
+.POs {
+  background-color: #e74c3c;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin to create space between the buttons */
+}
+
+.home_button {
+  background-color: #e74c3c;
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Add margin to create space between the buttons */
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+} 
+
+.stock:hover {
+  background-color: #c0392b;
+}

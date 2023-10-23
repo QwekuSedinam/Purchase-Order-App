@@ -1,0 +1,27 @@
+<!-- search-bar.component.html -->
+<div class="form">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <input type="text"  formControlName="searchInput" placeholder="Enter Item name" (input)="onInput()" (change)="onInput()" >
+      <button class="form-but" type="submit">Search</button>
+    </form>
+    <div *ngIf="showSuggestions" class="list-container">
+      <ul class="suggestion-list">
+        <li *ngFor="let suggestion of suggestions ">
+          <button class="sugglist" (click)="onSuggestionClick(suggestion.Name)">{{ suggestion.Name }}</button>
+        </li>
+      </ul>
+    </div>
+</div>
+
+<div class="table-container">
+  <table #table>
+    <tr>
+      <th>Name</th>
+      <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let item of stock_Items">
+      <td>{{ item.Name }}</td>
+      <td>{{ item.Quantity }}</td>
+    </tr>
+  </table>
+</div>

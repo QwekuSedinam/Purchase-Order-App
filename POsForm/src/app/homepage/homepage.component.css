@@ -1,0 +1,60 @@
+.homepage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+  
+.big-button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;  
+  height: 100px;
+  width: 100px;
+}
+
+.big-but {
+  display: flex;
+  text-align: center;
+  background-color: #3498db;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;  
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.big-button img {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  height: 50%;
+}
+
+.big-button span {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.big-but span {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+}
+  
+.big-button:hover {
+  background-color: #0056b3;
+}
+  
