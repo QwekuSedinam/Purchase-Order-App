@@ -76,11 +76,11 @@ export class StocksComponent implements OnInit {
 
   onSuggestionClick(suggestion: string) {
     
-      this.searchInput.setValue(suggestion);
-    
     this.searchItems(suggestion).subscribe(
       (res) => {
         this.stock_Items = res;
+        this.showSuggestions = false;
+        this.searchInput.setValue(suggestion);
         // Handle the response from the Express server.
         console.log('Response from server:', this.stock_Items);
       },
@@ -88,7 +88,6 @@ export class StocksComponent implements OnInit {
         console.error('Error:', error);
       }
     );
-    this.showSuggestions = false;
   }
 
   searchItems(searchValue: string): Observable<any> {

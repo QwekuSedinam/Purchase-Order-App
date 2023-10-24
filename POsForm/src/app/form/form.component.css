@@ -64,10 +64,16 @@ tr {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  max-width: 100px;
+  max-width: 130px;
   margin-top: 30px;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.error-handler{
+  color: red;
+  margin-left: 40%;
+  margin-right: 40%;
 }
 
 .export-button:hover{

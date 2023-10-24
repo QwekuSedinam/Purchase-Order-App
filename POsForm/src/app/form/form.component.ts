@@ -18,6 +18,7 @@ export class FormComponent implements OnInit {
 
   POs_Items: POsQuery[]=[];
   empty_array: boolean = false;
+  notfound: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient,) { }
 
@@ -34,6 +35,11 @@ export class FormComponent implements OnInit {
       this.searchItems(searchValue).subscribe(
         (res) => {
           this.POs_Items = res;
+          if(this.POs_Items.length===0){
+            this.empty_array = false;
+            this.notfound = true;
+          }else
+          this.empty_array = true;
           // Handle the response from the Express server.
           console.log('Response from server:', this.POs_Items);
         },
@@ -42,11 +48,6 @@ export class FormComponent implements OnInit {
         }
       );
     }
-
-    if(this.POs_Items.length===0){
-      this.empty_array = false;
-    }else
-    this.empty_array = true;
   }
 
   searchItems(searchValue: string): Observable<any> {
@@ -56,12 +57,14 @@ export class FormComponent implements OnInit {
   }
 
   exportToExcel(): void {
+
+    const searchValue = this.formGroup.get('searchInput')?.value;
     const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(this.myTable.nativeElement);
     const wb: XLSX.WorkBook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
 
     // Export the Excel file
-    XLSX.writeFile(wb, 'table_data.xlsx');
+    XLSX.writeFile(wb, searchValue +'.xlsx');
   }
   
 }

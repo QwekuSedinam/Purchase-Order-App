@@ -4,10 +4,14 @@
       <button type="submit">Search</button>
     </form>
 </div>
+
+<div *ngIf="notfound" >
+  <span class="error-handler">Purchase Order Not Found!!!</span>
+</div>
   
 <div>
   
-  <table *ngIf="empty_array" id="myTable">
+  <table *ngIf="empty_array" #myTable>
     <tr>
       <th>Barcode</th>
       <th>Name</th>
