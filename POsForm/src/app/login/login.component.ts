@@ -5,11 +5,11 @@ import { SharedDataService } from '../sharedata.service';
 
 
 @Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html',
-  styleUrls: ['./results.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class ResultsComponent {
+export class LoginComponent {
   username: string = '';
   password: string = '';
   loginError: boolean = false;

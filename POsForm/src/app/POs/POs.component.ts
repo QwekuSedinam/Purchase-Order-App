@@ -7,11 +7,11 @@ import { POsQuery } from './POs_Model';
 import * as XLSX from 'xlsx';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  selector: 'app-POs',
+  templateUrl: './POs.component.html',
+  styleUrls: ['./POs.component.css']
 })
-export class FormComponent implements OnInit {
+export class POsComponent implements OnInit {
   formGroup: FormGroup = new FormGroup({}); // Initialize the formGroup
   @ViewChild('myTable', { static: false }) myTable!: ElementRef;
   
@@ -38,8 +38,10 @@ export class FormComponent implements OnInit {
           if(this.POs_Items.length===0){
             this.empty_array = false;
             this.notfound = true;
-          }else
-          this.empty_array = true;
+          }else{
+            this.empty_array = true;
+            this.notfound = false;
+          }
           // Handle the response from the Express server.
           console.log('Response from server:', this.POs_Items);
         },
