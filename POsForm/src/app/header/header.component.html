@@ -6,10 +6,10 @@
         <button (click)="stock()" class="stock">stock_Items</button>  
     </div> -->
     <div *ngIf="isButtonVisible()">
-        <button (click)="homepage()" class="home_button">Homepage</button>
-        <button (click)="POs()" class="POs">POs Finder</button>
-        <button (click)="stock()" class="stock">stock_Items</button>
-        <button (click)="logout()" class="logout-button">Logout</button>
+        <button (click)="homepage()" class="home_button"><i class="fa fa-home" aria-hidden="true"></i>Home</button>
+        <button (click)="POs()" class="POs"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Purchase Order</button>
+        <button (click)="stock()" class="stock"><i class="fa fa-table" aria-hidden="true"></i>Items</button>
+        <button (click)="logout()" class="logout-button"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
     </div>    
 </div>
   

@@ -1,6 +1,8 @@
 /* header.component.css */
 
 .app-header {
+  /* position: fixed;
+  z-index: 100; */
   background-color: #3498db;
   color: #fff;
   display: flex;
@@ -66,4 +68,8 @@
 
 .stock:hover {
   background-color: #c0392b;
+}
+
+.fa{
+  margin-right: 5px;
 }

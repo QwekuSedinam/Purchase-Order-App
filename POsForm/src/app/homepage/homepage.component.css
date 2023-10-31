@@ -8,6 +8,7 @@
   
 .big-button {
   display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -16,12 +17,13 @@
   border: none;
   border-radius: 10%;
   cursor: pointer;  
-  height: 100px;
-  width: 100px;
+  height: 211.4px;
+  width: 150px; 
 }
 
 .big-but {
   display: flex;
+  flex-direction: column;
   text-align: center;
   background-color: #3498db;
   align-items: center;
@@ -30,8 +32,8 @@
   border: none;
   border-radius: 10%;
   cursor: pointer;  
-  height: 100px;
-  width: 100px;
+  /* height: 100px;*/
+  width: 150px;
   margin-right: 10px;
 }
 
@@ -46,15 +48,26 @@
   display: block;
   margin-top: 10px;
   color: #fff;
+  font-size: 20px;
 }
 
 .big-but span {
   display: block;
   margin-top: 10px;
   color: #fff;
+  font-size: 20px;
 }
   
 .big-button:hover {
   background-color: #0056b3;
+}
+
+.big-but:hover {
+  background-color: #0056b3;
+}
+
+.fa {
+  font-size: 135px;
+  color: #e74c3c;
 }
   

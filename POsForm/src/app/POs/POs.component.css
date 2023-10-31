@@ -54,6 +54,7 @@ tr {
 
 .export-button{
   align-items: center;
+  text-align: center;
   background-color: #466ae1;
   position: relative;
   color: #fff;

@@ -31,5 +31,8 @@
   </table>
 </div>
 <div class="button-container">
-  <button *ngIf="empty_array"  class="export-button" (click)="exportToExcel()">Export Table</button>
+  <button *ngIf="empty_array"  class="export-button" (click)="exportToExcel()">
+    <i class="fa fa-download" aria-hidden="true"></i>
+    Export Table
+  </button>
 </div>
